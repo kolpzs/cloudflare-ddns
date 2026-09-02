@@ -1,0 +1,18 @@
+services:
+  cloudflare-ddns:
+    build: .
+    container_name: cloudflare-ddns
+    restart: unless-stopped
+    init: true
+    read_only: true
+    environment:
+      CLOUDFLARE_API_TOKEN: ${CLOUDFLARE_API_TOKEN}
+      CF_RECORDS: ${CF_RECORDS}
+      CF_TTL: ${CF_TTL:-120}
+      CHECK_INTERVAL: ${CHECK_INTERVAL:-300}
+      CF_IP_PROVIDERS: ${CF_IP_PROVIDERS:-}
+    volumes:
+      - cfddns-data:/data
+
+volumes:
+  cfddns-data:

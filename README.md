@@ -1,3 +1,9 @@
+> [!NOTE]
+>
+> **This repository has moved to [devops-foz/cloudflare-ddns](https://github.com/devops-foz/cloudflare-ddns).**
+>
+> Archived for history only — new development, releases, and issues happen in the DevOps Foz organization.
+
 # Cloudflare DDNS
 
 A tiny, dependency-free [Cloudflare](https://www.cloudflare.com/) Dynamic DNS
